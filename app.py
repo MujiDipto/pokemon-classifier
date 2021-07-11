@@ -22,7 +22,7 @@ import cv2
 from PIL import Image
 
 
-new_model = load_model('pokemon_pred_mobilenet.h5')
+new_model = load_model('pokemon_classifier_dropout=8,6_lr=0.0001.h5')
 
 label_dict = {'Abra': 0,
  'Aerodactyl': 1,
@@ -274,4 +274,4 @@ def prepare_image(img):
 
 
 if __name__ == '__main__':
-   app.run(debug = True)
+   app.run()
