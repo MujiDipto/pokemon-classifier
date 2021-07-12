@@ -21,9 +21,10 @@ from tensorflow.keras.models import load_model
 import cv2
 from PIL import Image
 
-
+#importing the model
 new_model = load_model('pokemon_classifier_dropout=8,6_lr=0.0001.h5')
 
+#making a dictionary with the keys as labels
 label_dict = {'Abra': 0,
  'Aerodactyl': 1,
  'Alakazam': 2,
@@ -201,9 +202,11 @@ def classifiedPokemon():
        img = np.array(img)
        img = cv2.resize(img,(224,224))
 
+       #coverting channel 1 image to channel 3
        if len(img.shape)==2:
            img = cv2.cvtColor(img,cv2.COLOR_GRAY2BGRA)
 
+       #converting channel 4 image to channel 3
        if len(img.shape) > 2 and img.shape[2] == 4:
            #convert the image from RGBA2RGB
            img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
@@ -217,7 +220,7 @@ def classifiedPokemon():
        list_dir_string = f'static/{pokemon}'
        pokemon_image_directory = os.listdir(list_dir_string)
 
-       #returning images
+       #returning image
        pic1_name = pokemon_image_directory[0]
        pic1_location = f'static/{pokemon}/{pic1_name}'
 
@@ -245,15 +248,15 @@ def classifiedOwn():
        img = np.array(img)
        img = cv2.resize(img,(224,224))
 
+       #converting channel 1 image to channel 3
        if len(img.shape)==2:
            img = cv2.cvtColor(img,cv2.COLOR_GRAY2BGRA)
 
+       #converting channel 4 image to channel 3
        if len(img.shape) > 2 and img.shape[2] == 4:
            #convert the image from RGBA2RGB
            img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
 
-       # a = img.shape
-       # b = img.shape[2]
 
        preprocessed_image = prepare_image(img)
        predictions = new_model.predict(preprocessed_image)
@@ -264,32 +267,17 @@ def classifiedOwn():
        list_dir_string = f'static/{pokemon}'
        pokemon_image_directory = os.listdir(list_dir_string)
 
-       #returning images
+       #returning image
        pic1_name = pokemon_image_directory[0]
-       pic2_name = pokemon_image_directory[1]
        pic1_location = f'static/{pokemon}/{pic1_name}'
 
        return render_template('classifiedOwn.html', pokemon = pokemon, pic1_location=pic1_location)
 
 
-
-
-@app.route('/uploader', methods = ['GET', 'POST'])
-def upload_file():
-   if request.method == 'POST':
-      f = request.files['file']
-      f.save(secure_filename(f.filename))
-      return 'file uploaded successfully'
-
-
 def prepare_image(img):
-    #img_path = 'pokemon-prediction/'
-    # img = image.load_img(file, target_size=(224, 224))
-    # print(type(img))
     img_array = image.img_to_array(img)
     img_array_expanded_dims = np.expand_dims(img_array, axis=0)
     return tf.keras.applications.mobilenet.preprocess_input(img_array_expanded_dims)
-
 
 
 
