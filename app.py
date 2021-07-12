@@ -249,7 +249,16 @@ def classifiedOwn():
        predictions = new_model.predict(preprocessed_image)
        out = np.argmax(predictions)
        pokemon = list(label_dict.keys())[list(label_dict.values()).index(out)]
-       return render_template('classifiedOwn.html', pokemon = pokemon)
+
+       #getting pokemon image directory
+       list_dir_string = f'static/{pokemon}'
+       pokemon_image_directory = os.listdir(list_dir_string)
+
+       #returning images
+       pic1_name = pokemon_image_directory[0]
+       pic1_location = f'static/{pokemon}/{pic1_name}'
+
+       return render_template('classifiedOwn.html', pokemon = pokemon, pic1_location=pic1_location)
 
 
 
