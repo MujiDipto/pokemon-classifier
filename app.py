@@ -219,7 +219,6 @@ def classifiedPokemon():
 
        #returning images
        pic1_name = pokemon_image_directory[0]
-       pic2_name = pokemon_image_directory[1]
        pic1_location = f'static/{pokemon}/{pic1_name}'
 
 

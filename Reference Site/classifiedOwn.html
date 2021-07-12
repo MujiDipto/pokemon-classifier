@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>You are...</title>
-    <link rel="stylesheet" href="css/classifiedPokemonstyle.css" />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/classifiedPokemonstyle.css') }}">
+    <!-- <link rel="stylesheet" href="css/classifiedPokemonstyle.css" /> -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
@@ -21,13 +23,13 @@
 
 <body>
     <div id="result">
-        <h1> You are Pikachu! </h1>
-        <img src="images/Pikachu/00000001.png" height="500px" width="500px">
+        <h1> You are {{pokemon}}! </h1>
+        <img src="{{pic1_location}}" height="500px" width="500px">
     </div>
     </br>
     <div style="text-align:center">
-        <button style="width:220px" onclick="location.href='uploadOwn.html'">Try Another!</button>
-        <button onclick="location.href='home.html'">Home</button>
+        <button style="width:220px" onclick="location.href='{{ url_for('uploadOwn') }}'">Try Another!</button>
+        <button onclick="location.href='{{ url_for('home') }}'">Home</button>
     </div>
     <footer>
         <p class="simple"> Created with &#10084;&#65039; by</p>
