@@ -94,7 +94,9 @@ To get a local copy up and running follow these simple steps:
    pip install -r requirements.txt
    ```
 5. Run [app.py]
-
+    ```sh
+   python app.py
+   ```
 
 
 
