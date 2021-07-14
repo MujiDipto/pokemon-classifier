@@ -71,7 +71,10 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps:
+#### To test out the app visit:
+http://pokemon-identifier.herokuapp.com/
+
+#### To get a local copy up and running follow these simple steps:
 
 
 
