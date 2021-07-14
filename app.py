@@ -223,19 +223,22 @@ def classifiedPokemon():
            pokemon_names.append(list(label_dict.keys())[list(label_dict.values()).index(pokemon_index)])
 
        print(pokemon_names)
+       print(prob_1)
+       if prob_1 >=70:
+           #getting pokemon image directory
+           list_dir_string = f'static/{pokemon}'
+           pokemon_image_directory = listdir(list_dir_string)
+
+           #returning image
+           pic1_name = pokemon_image_directory[0]
+           pic1_location = f'static/{pokemon}/{pic1_name}'
 
 
-       #getting pokemon image directory
-       list_dir_string = f'static/{pokemon}'
-       pokemon_image_directory = listdir(list_dir_string)
+           return render_template('classifiedPokemon.html', pokemon = pokemon, pic1_location=pic1_location)
+       else:
+           return render_template('couldNotClassify.html')
 
-       #returning image
-       pic1_name = pokemon_image_directory[0]
-       pic1_location = f'static/{pokemon}/{pic1_name}'
-
-
-       return render_template('classifiedPokemon.html', pokemon = pokemon, pic1_location=pic1_location)
-
+       #return render_template('home.html')
 
 
 @app.route('/pokemonList')
