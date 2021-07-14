@@ -205,6 +205,26 @@ def classifiedPokemon():
        out = argmax(predictions)
        pokemon = list(label_dict.keys())[list(label_dict.values()).index(out)]
 
+       order_indexes = (argsort(predictions))
+       # print(order_indexes)
+       top_5_pokemons_indexes = [order_indexes[0][-1], order_indexes[0][-2], order_indexes[0][-3], order_indexes[0][-4],
+                         order_indexes[0][-5]]
+
+       prob_1 = round(predictions[0][top_5_pokemons_indexes[0]] * 100, 2)
+       prob_2 = round(predictions[0][top_5_pokemons_indexes[1]] * 100, 2)
+       prob_3 = round(predictions[0][top_5_pokemons_indexes[2]] * 100, 2)
+       prob_4 = round(predictions[0][top_5_pokemons_indexes[3]] * 100, 2)
+       prob_5 = round(predictions[0][top_5_pokemons_indexes[4]] * 100, 2)
+
+       print(prob_1, prob_2, prob_3, prob_4, prob_5)
+
+       pokemon_names = []
+       for pokemon_index in top_5_pokemons_indexes:
+           pokemon_names.append(list(label_dict.keys())[list(label_dict.values()).index(pokemon_index)])
+
+       print(pokemon_names)
+
+
        #getting pokemon image directory
        list_dir_string = f'static/{pokemon}'
        pokemon_image_directory = listdir(list_dir_string)
@@ -269,7 +289,7 @@ def classifiedOwn():
        for pokemon_index in top_5_pokemons_indexes:
            pokemon_names.append(list(label_dict.keys())[list(label_dict.values()).index(pokemon_index)])
 
-       # print(pokemon_names)
+       print(pokemon_names)
 
        #getting pokemon image directory
        list_dir_string = f'static/{pokemon}'
