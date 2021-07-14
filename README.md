@@ -20,7 +20,7 @@
    <!--- ·  --->
    <!---   <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a> --->
     <!--- ·  --->
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/MujiDipto/pokemon-classifier/issues">Request Feature</a>
   </p>
 </p>
 
@@ -71,7 +71,10 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps:
+#### To test out the app visit:
+https://pokemon-identifier.herokuapp.com/
+
+#### To get a local copy up and running follow these simple steps:
 
 
 
