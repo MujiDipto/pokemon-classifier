@@ -31,7 +31,7 @@ for d in dirs:
     # get the list of images
     images = os.listdir()
 
-    # only iterate through 10% of the list
+    # only iterate through 15% of the list
     n = math.floor(len(images) * 0.15)
     
     for i in range(n):
