@@ -287,12 +287,15 @@ def classifiedOwn():
        prob_5 = round(predictions[0][top_5_pokemons_indexes[4]] * 100, 2)
 
        print(prob_1, prob_2, prob_3, prob_4, prob_5)
+       top_5_prob_list = [prob_1, prob_2, prob_3, prob_4, prob_5]
 
        pokemon_names = []
        for pokemon_index in top_5_pokemons_indexes:
            pokemon_names.append(list(label_dict.keys())[list(label_dict.values()).index(pokemon_index)])
 
        print(pokemon_names)
+
+
 
        #getting pokemon image directory
        list_dir_string = f'static/{pokemon}'
@@ -302,7 +305,7 @@ def classifiedOwn():
        pic1_name = pokemon_image_directory[0]
        pic1_location = f'static/{pokemon}/{pic1_name}'
 
-       return render_template('classifiedOwn.html', pokemon = pokemon, pic1_location=pic1_location)
+       return render_template('classifiedOwn.html', pokemon = pokemon, pic1_location=pic1_location, top_5_prob_list=top_5_prob_list, pokemon_names=pokemon_names)
 
 
 def prepare_image(img):

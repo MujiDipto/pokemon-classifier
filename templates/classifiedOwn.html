@@ -31,6 +31,16 @@
         <button style="width:220px" onclick="location.href='{{ url_for('uploadOwn') }}'">Try Another!</button>
         <button onclick="location.href='{{ url_for('home') }}'">Home</button>
     </div>
+
+
+    <ul>
+      <li>{{pokemon_names[0]}}: {{top_5_prob_list[0]}}%</li>
+      <li>{{pokemon_names[1]}}: {{top_5_prob_list[1]}}%</li>
+      <li>{{pokemon_names[2]}}: {{top_5_prob_list[2]}}%</li>
+      <li>{{pokemon_names[3]}}: {{top_5_prob_list[3]}}%</li>
+      <li>{{pokemon_names[4]}}: {{top_5_prob_list[4]}}%</li>
+    </ul>
+
     <footer>
         <p class="simple"> Created with &#10084;&#65039; by</p>
         <!-- <p class="simple"> This website is a personal project and is not related to Pokemon in any way.</p> -->
