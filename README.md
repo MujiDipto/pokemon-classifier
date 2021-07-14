@@ -72,7 +72,7 @@
 ## Getting Started
 
 #### To test out the app visit:
-http://pokemon-identifier.herokuapp.com/
+https://pokemon-identifier.herokuapp.com/
 
 #### To get a local copy up and running follow these simple steps:
 
