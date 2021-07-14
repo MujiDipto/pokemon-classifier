@@ -71,7 +71,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps:
+To get a local copy up and running follow these simple steps:
 
 
 
@@ -86,9 +86,13 @@ To get a local copy up and running follow these simple example steps:
    Visit https://www.anaconda.com/download/
 
 3. Create a conda environment
-
+    ```sh
+   conda create -n [ENVIRONMENT_NAME]
+   ```
 4. Use [requirements] to automatically load all dependencies.
-
+    ```sh
+   pip install -r requirements.txt
+   ```
 5. Run [app.py]
 
 
@@ -96,7 +100,7 @@ To get a local copy up and running follow these simple example steps:
 
 ### Usage
 
-The app contains two main functionalities.
+The app contains two main functionalities:
 
 #### Identify the name of a Pokemon given its image.
 
