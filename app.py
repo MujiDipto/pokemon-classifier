@@ -298,14 +298,49 @@ def classifiedOwn():
 
 
        #getting pokemon image directory
-       list_dir_string = f'static/{pokemon}'
-       pokemon_image_directory = listdir(list_dir_string)
+       #pokemon 1
+       list_dir_string_1 = f'static/{pokemon_names[0]}'
+       pokemon_1_image_directory = listdir(list_dir_string_1)
+       #pokemon 2
+       list_dir_string_2 = f'static/{pokemon_names[1]}'
+       pokemon_2_image_directory = listdir(list_dir_string_2)
+       #pokemon 3
+       list_dir_string_3 = f'static/{pokemon_names[2]}'
+       pokemon_3_image_directory = listdir(list_dir_string_3)
+       #pokemon 4
+       list_dir_string_4 = f'static/{pokemon_names[3]}'
+       pokemon_4_image_directory = listdir(list_dir_string_4)
+       #pokemon 5
+       list_dir_string_5 = f'static/{pokemon_names[4]}'
+       pokemon_5_image_directory = listdir(list_dir_string_5)
+
+
 
        #returning image
-       pic1_name = pokemon_image_directory[0]
-       pic1_location = f'static/{pokemon}/{pic1_name}'
+       #returning pokemon 1 image
+       pic1_name = pokemon_1_image_directory[0]
+       pic1_location = f'static/{pokemon_names[0]}/{pic1_name}'
+       #returning pokemon 2 image
+       pic2_name = pokemon_2_image_directory[1]
+       pic2_location = f'static/{pokemon_names[1]}/{pic2_name}'
+       #returning pokemon 3 image
+       pic3_name = pokemon_3_image_directory[2]
+       pic3_location = f'static/{pokemon_names[2]}/{pic3_name}'
+       #returning pokemon 4 image
+       pic4_name = pokemon_4_image_directory[3]
+       pic4_location = f'static/{pokemon_names[3]}/{pic4_name}'
+       #returning pokemon 5 image
+       pic5_name = pokemon_5_image_directory[4]
+       pic5_location = f'static/{pokemon_names[4]}/{pic5_name}'
 
-       return render_template('classifiedOwn.html', pokemon = pokemon, pic1_location=pic1_location, top_5_prob_list=top_5_prob_list, pokemon_names=pokemon_names)
+       return render_template('classifiedOwn.html',pokemon = pokemon,
+                                                   pic1_location=pic1_location,
+                                                   pic2_location=pic2_location,
+                                                   pic3_location=pic3_location,
+                                                   pic4_location=pic4_location,
+                                                   pic5_location=pic5_location,
+                                                   top_5_prob_list=top_5_prob_list,
+                                                   pokemon_names=pokemon_names)
 
 
 def prepare_image(img):
