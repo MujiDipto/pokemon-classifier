@@ -20,7 +20,7 @@
    <!--- ·  --->
    <!---   <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a> --->
     <!--- ·  --->
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/MujiDipto/pokemon-classifier/issues">Request Feature</a>
   </p>
 </p>
 
