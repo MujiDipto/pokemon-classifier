@@ -1,11 +1,66 @@
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pokemon Classifier | No Match</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/classifiedPokemonstyle.css') }}">
+    <!-- <link rel="stylesheet" href="css/classifiedPokemonstyle.css" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+  <section>
+    <img src="static\Other\clipart646635.png" alt="Sad Pikachu" height="170px" width="150px">
+    <h1> Sorry we could not identify that Pokemon.</h1>
+    <h2> Possible reasons:</h2>
+    <p> It is not a Gen I Pokemon.</p>
+    <p> It is a greyscale or b/w image.</p>
+    <p> Still not working? Send us a report here with the image.</p>
+  </section>
+
+
+    <footer>
+        <p class="simple"> Created with &#10084;&#65039; by</p>
+        <!-- <p class="simple"> This website is a personal project and is not related to Pokemon in any way.</p> -->
+        <div class="authors">
+            <p> <a href="https://github.com/ahmedtausif5" target="_blank">Tausif Ahmed</a> |
+                <a href="https://www.notion.so/mujiworkspace/Portfolio-fd1b536a6efd4a96b4811d87b88f16ee" target="_blank">Mujibul Islam Dipto</a></p>
+        </div>
+        <p id="disclaimer"> Note: This is a personal project and is not related to Pokemon in any way.</p>
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <h1>could not classify</h1>
-    <h2>are you sure you are uploading a gen1 pokemon?</h2>
+    <h1>you are {{pokemon}}</h1>
+    <p>{{pic1_location}}</p>
+    <img src="{{pic1_location}}" alt="">
   </body>
-</html>
+</html> -->
