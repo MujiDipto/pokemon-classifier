@@ -147,7 +147,7 @@ Here, the CNN model is used to analyse features of a given user's photo (their o
 
 3. Congrats! You just found your inner spirit Pokemon!
 
-<img src="screenshots/classify-human/3.png" alt="step3" width="600" height="500">
+<img src="screenshots/classify-human/4.png" alt="step3" width="600" height="500">
 </details>
 
 
