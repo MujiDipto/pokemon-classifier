@@ -5,7 +5,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="static/Pikachu/clipart142408.png" alt="Logo" width="92" height="95">
+    <img src="static/Pikachu/clipart142408.png" alt="Logo" width="90" height="95">
   </a>
 
   <h3 align="center">Pokemon Classifier</h3>
